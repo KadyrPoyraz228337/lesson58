@@ -19,6 +19,7 @@ class App extends Component {
                 </button>
                 <Modal
                     show={this.state.show}
+                    close={this.close}
                     title='some modal title'
                 >
                     <p>
@@ -31,6 +32,9 @@ class App extends Component {
 
     show = () => {
         this.setState({show: true});
+    };
+    close = () => {
+        this.setState({show: false});
     }
 }
 
