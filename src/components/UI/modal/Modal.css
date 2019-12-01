@@ -69,6 +69,8 @@
     color: #540514;
 }
 .modalBody {
+    display: flex;
+    flex-direction: column;
     z-index: 500;
 }
 .modalFooter button {

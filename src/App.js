@@ -3,12 +3,12 @@ import Modal from "./components/UI/modal/Modal";
 
 class App extends Component {
     state = {
-        show: false,
+        showModal: false,
     };
     render() {
         const objects = [
             {type: 'primary', label: 'Continue', clicked: this.continue},
-            {type: 'danger', label: 'Close', clicked: this.close}
+            {type: 'danger', label: 'Close', clicked: this.close},
         ];
         return (
             <Fragment>
@@ -21,10 +21,10 @@ class App extends Component {
                     create alert
                 </button>
                 <Modal
-                    show={this.state.show}
+                    show={this.state.showModal}
                     close={this.close}
                     title='some modal title'
-                    // array={objects}
+                    array={objects}
                 >
                     <p>
                         Some modal body test text
@@ -35,13 +35,13 @@ class App extends Component {
     }
 
     show = () => {
-        this.setState({show: true});
+        this.setState({showModal: true});
     };
     continue = () => {
       alert('Test functional for continue button');
     };
     close = () => {
-        this.setState({show: false});
+        this.setState({showModal: false});
     }
 }
 
