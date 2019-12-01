@@ -33,6 +33,9 @@ class App extends Component {
     show = () => {
         this.setState({show: true});
     };
+    continue = () => {
+      alert('Test functional for continue button');
+    };
     close = () => {
         this.setState({show: false});
     }
