@@ -5,8 +5,11 @@ class App extends Component {
     state = {
         show: false,
     };
-
     render() {
+        const objects = [
+            {type: 'primary', label: 'Continue', clicked: this.continue},
+            {type: 'danger', label: 'Close', clicked: this.close}
+        ];
         return (
             <Fragment>
                 <button className="btn btn-primary" onClick={this.show}>
@@ -21,6 +24,7 @@ class App extends Component {
                     show={this.state.show}
                     close={this.close}
                     title='some modal title'
+                    array={objects}
                 >
                     <p>
                         Some modal body test text
