@@ -4,6 +4,7 @@ import Modal from "./components/UI/modal/Modal";
 class App extends Component {
     state = {
         showModal: false,
+        showAlert: false,
     };
     render() {
         const objects = [
