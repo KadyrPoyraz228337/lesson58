@@ -16,7 +16,7 @@ const Modal = (
                     {children}
                 </div>
                 <div className='modalFooter'>
-                    {array.map(elem => {
+                    {array && array.map(elem => {
                         if(elem.type === 'primary') {
                             return (
                                 <button onClick={elem.clicked}>

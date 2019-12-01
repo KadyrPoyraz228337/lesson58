@@ -24,7 +24,7 @@ class App extends Component {
                     show={this.state.show}
                     close={this.close}
                     title='some modal title'
-                    array={objects}
+                    // array={objects}
                 >
                     <p>
                         Some modal body test text
