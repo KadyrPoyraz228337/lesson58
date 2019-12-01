@@ -16,10 +16,21 @@ const Modal = (
                     {children}
                 </div>
                 <div className='modalFooter'>
-
-                    <button>
-                        ok
-                    </button>
+                    {array.map(elem => {
+                        if(elem.type === 'primary') {
+                            return (
+                                <button onClick={elem.clicked}>
+                                    {elem.label}
+                                </button>
+                            )
+                        } else {
+                            return (
+                                <button onClick={elem.clicked}>
+                                    {elem.label}
+                                </button>
+                            )
+                        }
+                    })}
                 </div>
             </div>
             <Backdrop

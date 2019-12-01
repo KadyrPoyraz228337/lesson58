@@ -73,6 +73,7 @@
 }
 .modalFooter button {
     width: 10%;
+    margin: 0 10px 0 0;
     color: rgb(121,9,31);
     font-weight: bold;
     background: rgb(255,0,78);
