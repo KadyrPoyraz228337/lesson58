@@ -9,7 +9,7 @@ class App extends Component {
     render() {
         return (
             <Fragment>
-                <button className="btn btn-primary" onClick={this.showModal}>
+                <button className="btn btn-primary" onClick={this.show}>
                     open modal
                 </button>
                 <br/>
@@ -29,8 +29,8 @@ class App extends Component {
         );
     }
 
-    showModal = () => {
-        this.setState({show: !this.state.show});
+    show = () => {
+        this.setState({show: true});
     }
 }
 
