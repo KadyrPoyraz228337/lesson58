@@ -25,8 +25,9 @@ class App extends Component {
                 <div style={{maxWidth: '500px', margin: '15px 0 0 0'}}>
                     <Alert
                         show={this.state.showAlert}
-                        type='warning'
+                        type='danger'
                         dismiss={this.dismiss}
+                        clickDismissable
                     >
                         Some alert text
                     </Alert>

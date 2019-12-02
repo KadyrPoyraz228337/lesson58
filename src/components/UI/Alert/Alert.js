@@ -1,19 +1,16 @@
 import React from 'react';
 
 const Alert = (
-    {dismiss, show, children, type}
+    {dismiss, show, children, type, clickDismissable}
 ) => {
     return show && (
         <div
-            className={`alert 
-            ${type === 'primary' && `alert-primary`} 
-            ${type === 'success' && 'alert-success'}
-            ${type === 'warning' && 'alert-warning'}
-            ${type === 'danger' && 'alert-danger'}
-            `
-        }>
+            onClick={clickDismissable && dismiss}
+            className={`alert alert-${type}`}
+            style={{cursor: clickDismissable && 'pointer'}}
+        >
             {children}
-            {dismiss !== undefined && <button type="button" className="close" onClick={dismiss}>
+            {clickDismissable === undefined && <button type="button" className="close" onClick={dismiss}>
                 <span aria-hidden="true">&times;</span>
             </button>}
         </div>
