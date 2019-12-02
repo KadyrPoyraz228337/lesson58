@@ -1,5 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import Modal from "./components/UI/modal/Modal";
+import Alert from "./components/UI/Alert/Alert";
 
 class App extends Component {
     state = {
@@ -18,9 +19,18 @@ class App extends Component {
                 </button>
                 <br/>
                 <br/>
-                <button className="btn btn-dark">
+                <button className="btn btn-dark" onClick={this.showAlert}>
                     create alert
                 </button>
+                <div style={{maxWidth: '500px', margin: '15px 0 0 0'}}>
+                    <Alert
+                        show={this.state.showAlert}
+                        type='warning'
+                        dismiss={this.dismiss}
+                    >
+                        Some alert text
+                    </Alert>
+                </div>
                 <Modal
                     show={this.state.showModal}
                     close={this.close}
@@ -43,6 +53,12 @@ class App extends Component {
     };
     close = () => {
         this.setState({showModal: false});
+    };
+    showAlert = () => {
+        this.setState({showAlert: true})
+    };
+    dismiss = () => {
+        this.setState({showAlert: false})
     }
 }
 
